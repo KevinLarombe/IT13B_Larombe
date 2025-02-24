@@ -20,16 +20,16 @@ public class Lab_Exercise2_FindTheGreatestNumber {
         int C = in.nextInt();
         
         
-        int greatest = A;
-        if (B > greatest) {
-            greatest = B;
+        int D = A;
+        if (B > D) {
+            D = B;
         }
-        if (C > greatest) {
-            greatest = C;
+        if (C > D) {
+            D = C;
         }
         
         
-        System.out.println("The greatest among the three numbers is: " + greatest);
+        System.out.println("The greatest among the three numbers is: " + D);
         
         in.close();
         

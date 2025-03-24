@@ -1,5 +1,6 @@
-package larombe_it13b_prelim;
+package larombe_it13b_midterm;
 
+import larombe_it13b_prelim.*;
 import java.util.Scanner;
 
 public class Larombe_IT13B_Palindrome {

@@ -1,4 +1,4 @@
-package larombe_it13b_activities;
+package larombe_it13b_prelim;
 
 import java.util.Scanner;
 

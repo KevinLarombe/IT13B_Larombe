@@ -10,15 +10,15 @@ import java.util.Scanner;
 public class Restaurant_Ordering_System {
     private static final String USERS_FILE = "C:\\Users\\User\\Documents\\GitHub\\IT13B_Larombe\\Larombe_IT13B_activities\\src\\Restaurant_Ordering_System\\input.txt";
     private static final int SHIFT = 3;
-    private static final String[] MENU_ITEMS = {"Pizza", "Burger", "Fries"};
-    private static final double[] MENU_PRICES = {120.0, 80.0, 50.0};
-    private static final int MAX_ITEMS = 10;
+    private static final String[] MENU_ITEMS = {"Pizza", "Burger", "Fries"}; // single
+    private static final double[] MENU_PRICES = {120.0, 80.0, 50.0};  // single
+    private static final int MAX_ITEMS = 1000;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("\nWelcome to the Restaurant Ordering System!");
+            System.out.println("\nWELCOME TO THE KEVZEL ORDERING SYSTEM!");
             System.out.println("[1] Login");
             System.out.println("[2] Create Account");
             System.out.println("[3] Exit");
@@ -28,18 +28,14 @@ public class Restaurant_Ordering_System {
             scanner.nextLine();
 
             switch (choice) {
-                case 1:
-                    login(scanner);
-                    break;
-                case 2:
-                    createAccount(scanner);
-                    break;
-                case 3:
-                    System.out.println("Exiting the system. Goodbye!");
+                case 1 -> login(scanner);
+                case 2 -> createAccount(scanner);
+                case 3 -> {
+                    System.out.println("THANK YOU AND COME AGAIN!");
                     scanner.close();
                     return;
-                default:
-                    System.out.println("Invalid choice. Please try again.");
+                }
+                default -> System.out.println("Invalid choice. Please try again.");
             }
         }
     }
@@ -96,7 +92,7 @@ public class Restaurant_Ordering_System {
         return false;
     }
 
-    private static String encrypt(String text, int shift) {
+    private static String encrypt(String text, int shift) {   // encrypt password
         StringBuilder sb = new StringBuilder();
         for (char c : text.toCharArray()) {
             if (Character.isLetter(c)) {
@@ -132,8 +128,9 @@ public class Restaurant_Ordering_System {
         double totalBill = 0.0;
         boolean ordering = true;
 
+                // MENU
         do {
-            System.out.println("\n--- Menu ---");
+            System.out.println("\n---Here our Kevzel Menu ---");
             for (int i = 0; i < MENU_ITEMS.length; i++) {
                 System.out.println((i + 1) + ". " + MENU_ITEMS[i] + " - *" + String.format("%.2f", MENU_PRICES[i]));
             }
